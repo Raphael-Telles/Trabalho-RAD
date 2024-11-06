@@ -113,7 +113,7 @@ root.resizable(False, False)
 root.configure(bg="#f0f0f0")
 
 # logo
-#root.iconbitmap("logo.ico")  # Coloque o arquivo "icone.ico" no mesmo diretório
+root.iconbitmap("logo.ico")  # Coloque o arquivo "icone.ico" no mesmo diretório
 
 # label de entrada
 Label(root, text="Nome:", bg="#f0f0f0", fg="#333333", font=("Arial", 10)).grid(row=0, column=0, padx=(5, 2), pady=5, sticky="e")
