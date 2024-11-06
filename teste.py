@@ -57,8 +57,10 @@ def listar(filtro=""):
                 media = media + simulado2
                 status = "Aprovado" if media >= 6 else "Reprovado"
                 tag = "Aprovado" if media >= 6 else "Reprovado"
-                if media >= 10:
-                    media =10
+        if media >= 10:
+            media = 10.0
+            status = "Aprovado" if media >= 6 else "Reprovado"
+            tag = "Aprovado" if media >= 6 else "Reprovado"
         tree.insert("", "end", iid=aluno_id, values=(aluno_id, nome, nota1, nota2, simulado1, simulado2, media, status), tags=(tag,))
     tree.tag_configure("Aprovado", foreground="green")
     tree.tag_configure("Reprovado", foreground="red")
