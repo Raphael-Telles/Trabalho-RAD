@@ -42,7 +42,7 @@ def listar(filtro=""):
         tree.delete(item)
     for row in listar_alunos(cur, filtro):
         aluno_id, nome, nota1, nota2, media = row
-        status = "Aprovado" if media >= 6 else "Reprovado"
+        status = "Aprovado" if media >= 6 else "Reprovados"
         tag = "Aprovado" if media >= 6 else "Reprovado"
         tree.insert("", "end", iid=aluno_id, values=(aluno_id, nome, nota1, nota2, media, status), tags=(tag,))
     tree.tag_configure("Aprovado", foreground="green")
