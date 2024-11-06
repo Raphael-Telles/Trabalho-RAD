@@ -86,7 +86,7 @@ def editar():
         simulado1 = entry_simulado1.get()
         simulado2 = entry_simulado2.get()
         
-        if not nome or not nota1 or not nota2:
+        if not nome or not nota1 or not nota2 or not simulado1 or not simulado2:
             messagebox.showerror("Erro ao Editar", "Todos os campos são obrigatórios.")
             return
 
