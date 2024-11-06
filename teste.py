@@ -19,7 +19,7 @@ def adicionar():
     nota2 = entry_nota2.get()
     
     if not nome or not nota1 or not nota2:
-        messagebox.showerror("Erro", "Todos os campos são obrigatórios.")
+        messagebox.showerror("Erro ao Adicionar", "Todos os campos são obrigatórios.")
         return
     
     try:
