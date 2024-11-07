@@ -1,6 +1,6 @@
 import sqlite3
 
-# Função para conectar ao banco de dados e criar a tabela se não existir
+# criar se não existir e conectar
 def conectar():
     con = sqlite3.connect("alunos.db")
     cur = con.cursor()
@@ -18,7 +18,7 @@ def conectar():
     con.commit()
     return con, cur
 
-# Funções CRUD
+# crud básico
 def adicionar_aluno(cur, nome, nota1, nota2, simulado1, simulado2):
     media = (nota1 + nota2) / 2
     cur.execute("INSERT INTO alunos (nome, nota1, nota2, simulado1, simulado2, media) VALUES (?, ?, ?, ?, ?, ?)", (nome, nota1, nota2, simulado1, simulado2, media))

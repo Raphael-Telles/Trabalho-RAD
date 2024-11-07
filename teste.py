@@ -136,44 +136,44 @@ def on_tree_select(event):
 # info janela
 root = Tk()
 root.title("Cadastro de Alunos")
-root.geometry("800x450")
+root.geometry("720x450")
 root.resizable(False, False)
 root.configure(bg="#f0f0f0")
 
 # logo
-root.iconbitmap("logo.ico")  # Coloque o arquivo "icone.ico" no mesmo diretório
+root.iconbitmap("logo.ico")  # precisa ser .ico
 
 # label de entrada
-Label(root, text="Nome:", bg="#f0f0f0", fg="#333333", font=("Arial", 10)).grid(row=0, column=0, padx=(5, 2), pady=5, sticky="e")
+Label(root, text="Nome:", bg="#f0f0f0", fg="#333333", font=("Franklin Gothic", 10)).grid(row=0, column=0, padx=(0, 2), pady=(15,5), sticky="e")
 entry_nome = Entry(root, width=41, font=("Arial", 10))
-entry_nome.grid(row=0, column=1, padx=2, pady=5, sticky="w", columnspan=2)
+entry_nome.grid(row=0, column=1, padx=2, pady=(15,5), sticky="w", columnspan=2)
 
-Label(root, text="Nota 1:", bg="#f0f0f0", fg="#333333", font=("Arial", 10)).grid(row=1, column=0, padx=(5, 2), pady=5, sticky="e")
+Label(root, text="Nota 1:", bg="#f0f0f0", fg="#333333", font=("Franklin Gothic", 10)).grid(row=1, column=0, padx=(5, 2), pady=5, sticky="e")
 entry_nota1 = Entry(root, width=10, font=("Arial", 10))
 entry_nota1.grid(row=1, column=1, padx=(2, 138), pady=5, sticky="w")
 
-Label(root, text="Nota 2:", bg="#f0f0f0", fg="#333333", font=("Arial", 10)).grid(row=2, column=0, padx=(5, 2), pady=5, sticky="e")
+Label(root, text="Nota 2:", bg="#f0f0f0", fg="#333333", font=("Franklin Gothic", 10)).grid(row=2, column=0, padx=(5, 2), pady=5, sticky="e")
 entry_nota2 = Entry(root, width=10, font=("Arial", 10))
 entry_nota2.grid(row=2, column=1, padx=(2, 100), pady=5, sticky="w")
 
-Label(root, text="Simulado 1:", bg="#f0f0f0", fg="#333333", font=("Arial", 10)).grid(row=1, column=1, padx=(5, 2), pady=5, sticky="e")
+Label(root, text="Simulado 1:", bg="#f0f0f0", fg="#333333", font=("Franklin Gothic", 10)).grid(row=1, column=1, padx=(5, 2), pady=5, sticky="e")
 entry_simulado1 = Entry(root, width=10, font=("Arial", 10))
 entry_simulado1.grid(row=1, column=2, padx=2, pady=5, sticky="w")
 
-Label(root, text="Simulado 2:", bg="#f0f0f0", fg="#333333", font=("Arial", 10)).grid(row=2, column=1, padx=(5, 2), pady=5, sticky="e")
+Label(root, text="Simulado 2:", bg="#f0f0f0", fg="#333333", font=("Franklin Gothic", 10)).grid(row=2, column=1, padx=(5, 2), pady=5, sticky="e")
 entry_simulado2 = Entry(root, width=10, font=("Arial", 10))
 entry_simulado2.grid(row=2, column=2, padx=2, pady=5, sticky="w")
 
 # criando os botões
-Button(root, text="Adicionar", command=adicionar, bg="#4CAF50", fg="white", font=("Arial", 10), width=10).grid(row=0, column=2, padx=(5, 2), pady=5)
-Button(root, text="Excluir", command=excluir, bg="#f44336", fg="white", font=("Arial", 10), width=10).grid(row=2, column=2, padx=2, pady=5)
-Button(root, text="Editar", command=editar, bg="#FFC107", fg="white", font=("Arial", 10), width=10).grid(row=1, column=2, padx=(2, 5), pady=5)
+Button(root, text="Adicionar", command=adicionar, bg="#4CAF50", fg="white", font=("Franklin Gothic", 10), width=10).grid(row=0, column=2, padx=(3, 2), pady=(15,5))
+Button(root, text="Excluir", command=excluir, bg="#E83B3B", fg="white", font=("Franklin Gothic", 10), width=10).grid(row=2, column=2, padx=2, pady=5)
+Button(root, text="Editar", command=editar, bg="#FFC517", fg="white", font=("Franklin Gothic", 10), width=10).grid(row=1, column=2, padx=(2, 5), pady=5)
 
 # botão de buscar
-Label(root, text="Buscar:", bg="#f0f0f0", fg="#333333", font=("Arial", 10)).grid(row=5, column=0, padx=(5, 2), pady=5, sticky="e")
-entry_busca = Entry(root, width=41, font=("Arial", 10))
+Label(root, text="Buscar:", bg="#f0f0f0", fg="#333333", font=("Franklin Gothic", 10)).grid(row=5, column=0, padx=(5, 2), pady=5, sticky="e")
+entry_busca = Entry(root, width=41, font=("Franklin Gothic", 10))
 entry_busca.grid(row=5, column=1, padx=2, pady=5, sticky="w", columnspan=2)
-Button(root, text="Buscar", command=buscar, bg="#2196F3", fg="white", font=("Arial", 10), width=10).grid(row=5, column=2, padx=(2, 5))
+Button(root, text="Buscar", command=buscar, bg="#3B6FE8", fg="white", font=("Franklin Gothic", 10), width=10).grid(row=5, column=2, padx=(2, 5))
 
 # descrição tabela
 columns = ("ID", "Nome", "Nota 1", "Nota 2", "Simulado 1", "Simulado 2", "Média", "Status")
@@ -199,8 +199,8 @@ tree.column("Status", width=100, anchor="center")
 
 # style
 style = ttk.Style()
-style.configure("Treeview.Heading", font=("Arial", 12, "bold"))
-style.configure("Treeview", font=("Arial", 10))
+style.configure("Treeview.Heading", font=("Franklin Gothic", 11, "bold"))
+style.configure("Treeview", font=("Franklin Gothic", 10))
 
 tree.grid(row=6, column=0, columnspan=3, pady=20)
 
