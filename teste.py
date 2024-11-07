@@ -13,7 +13,6 @@ def limpar_campos():
     entry_simulado1.delete(0, END)
     entry_simulado2.delete(0, END)
     entry_busca.delete(0, END)
-
 # banco
 def adicionar():
     nome = entry_nome.get()
